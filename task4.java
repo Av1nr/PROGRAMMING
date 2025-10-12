@@ -12,23 +12,19 @@ public class task4 {
         String letters = "аеёиоуыэюя";
         for(int i = 0 ; i < razmer ; i++){
             int number = i;
-            int z = zapomnin;
             String slovo = "";
             while (number > 0){
                 slovo = letters.charAt(number % 10) + slovo;
                 number /= 10;
             }
-            if (slovo.length() < z){
-                while (z > 0){
-                    slovo = "a" + slovo;
-                    z--;
-                    if (slovo.length() >= zapomnin){
-                        break;
-                    }
-                    System.out.print(slovo + "  ");
-                }
+            
+            if (slovo.length() == zapomnin){ 
+                System.out.print(slovo + "  ");
             }
-            if (slovo.length() >= zapomnin){ 
+            else{
+                while (slovo.length() < zapomnin){
+                    slovo = "a" + slovo;
+                }
                 System.out.print(slovo + "  ");
             }
         }
