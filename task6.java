@@ -6,7 +6,6 @@ public class task6 {
         System.out.print("Введите размер квадратной матрицы: ");
         int n = enter.nextInt();
         int centermatrix = n/2;
-        float sromb = n * n / 2;
         int[][]matrix1 = new int[n][n];
         int[][]matrix2 = new int[n / 2][n];
         int[][]matrix3 = new int[n][n];
@@ -33,4 +32,5 @@ public class task6 {
         }
         enter.close();
     }
+
 }
