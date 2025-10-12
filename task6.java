@@ -7,8 +7,6 @@ public class task6 {
         int n = enter.nextInt();
         int centermatrix = n/2;
         int[][]matrix1 = new int[n][n];
-        int[][]matrix2 = new int[n / 2][n];
-        int[][]matrix3 = new int[n][n];
         for (int i = 0 ; i < n ; i++){
             for (int j = 0 ; j < n ; j ++){
                 int ci = centermatrix - i;
@@ -32,5 +30,4 @@ public class task6 {
         }
         enter.close();
     }
-
 }
