@@ -1,9 +1,27 @@
 import java.util.Scanner;
-public class task2{
+public class task2ifsplitnekruto{
     public static void main(String[] args){
         Scanner enter = new Scanner(System.in);
         String stroka = enter.nextLine();
-        String[] words = stroka.split(" ");
+        stroka = stroka.trim();
+        //String[] words = stroka.split(" ");
+        int counterprobel = 0;
+        for (int i = 0; i < stroka.length(); i++){
+            if (stroka.charAt(i) == ' '){
+                counterprobel++;
+            }
+        }
+        String[] words = new String[counterprobel + 1];
+        int counter = 0;
+        int start = 0;
+        for (int i = 0; i <= stroka.length(); i++) {
+            if (i == stroka.length() || stroka.charAt(i) == ' ') {
+                String word = stroka.substring(start, i);
+                words[counter] = word;
+                start = i + 1;
+                counter++;
+            }
+        }
         String maxslovo = "";
         int maxcount = 0;
         int count = 0;
