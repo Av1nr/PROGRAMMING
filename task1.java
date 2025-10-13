@@ -16,9 +16,13 @@ public class task1{
             if (newslovo.charAt(i) == newslovo.charAt(newslovo.length() - 1 - i)){
                 flag = true;
             }
+            else{
+                flag = false;
+            }
         }
         enter.close();
         System.out.println(newslovo);
         System.out.println(flag);
     }
 }
+
