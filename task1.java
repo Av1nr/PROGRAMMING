@@ -3,6 +3,7 @@ public class task1{
     public static void main(String[] args){
         Scanner enter = new Scanner(System.in);
         String slovo = enter.nextLine();
+        slovo = Trim(slovo);
         String newslovo = "";
         for (int i = 0 ; i < slovo.length() ; i++){
             char bukva = slovo.charAt(i);
@@ -31,5 +32,23 @@ public class task1{
         else{
             return x;
         }
+    }
+    public static String Trim(String str){
+        int counter = 0;
+        String konec = "";
+        int secondc = str.length() - 1;
+        while (str.charAt(counter) == ' '){
+            konec = "";
+            counter++;
+        }
+        while (str.charAt(secondc) == ' '){
+            konec = "";
+            secondc--;
+        }
+        for (int i = counter ; i < secondc + 1; i ++){
+            konec = konec + str.charAt(i);
+        }
+        
+        return konec;
     }
 }
