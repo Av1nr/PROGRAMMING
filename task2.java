@@ -1,9 +1,9 @@
 import java.util.Scanner;
-public class task2ifsplitnekruto{
+public class task2{
     public static void main(String[] args){
         Scanner enter = new Scanner(System.in);
         String stroka = enter.nextLine();
-        stroka = stroka.trim();
+        stroka = Trim(stroka);
         //String[] words = stroka.split(" ");
         int counterprobel = 0;
         for (int i = 0; i < stroka.length(); i++){
@@ -48,5 +48,22 @@ public class task2ifsplitnekruto{
         System.out.println(maxslovo);
         enter.close();
     }
+    public static String Trim(String str){
+        int counter = 0;
+        String konec = "";
+        int secondc = str.length() - 1;
+        while (str.charAt(counter) == ' '){
+            konec = "";
+            counter++;
+        }
+        while (str.charAt(secondc) == ' '){
+            konec = "";
+            secondc--;
+        }
+        for (int i = counter ; i < secondc + 1; i ++){
+            konec = konec + str.charAt(i);
+        }
+        
+        return konec;
+    }
 }
-
