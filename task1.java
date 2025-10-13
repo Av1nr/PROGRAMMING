@@ -7,26 +7,25 @@ public class task1{
         for (int i = 0 ; i < slovo.length() ; i++){
             char bukva = slovo.charAt(i);
             if (bukva != ' ' && bukva != '.' && bukva != ',' && bukva != ':'){
-                newslovo = slovo.charAt(i) + newslovo;
+                newslovo = newslovo + ToLower(slovo.charAt(i));
             }
         }
-        boolean flag = false;
+        int count = 0;
         for (int i = 0 ; i < newslovo.length() ; i++){
-            if (ToLower(newslovo.charAt(i)) == ToLower(newslovo.charAt(newslovo.length() - 1 - i))){
-                flag = true;
-            }
-            else{
-                flag = false;
-            }
+            if (newslovo.charAt(i) != newslovo.charAt(newslovo.length() - 1 - i)){
+                count++;
+            }  
         }
-        enter.close();
-        System.out.println(newslovo);
-        System.out.println(flag);
+        if (count == 0){
+            System.out.println(true);
+        }
+        else{
+            System.out.println(false);
+        }
     }
     public static char ToLower(char x){
-        if ('A' <= x && x >= 'Z'){
-            int y = x;
-            y = y + 32;
+        if ('A' <= x && x <= 'Z'){
+            int y = x + 32;
             return (char) y;
         }
         else{
