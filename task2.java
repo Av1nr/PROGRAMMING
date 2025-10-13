@@ -49,3 +49,4 @@ public class task2ifsplitnekruto{
         enter.close();
     }
 }
+
